@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,10 +13,7 @@
   <!-- ===== Font: JetBrains Mono (monospace) ===== -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
   <!-- ===== Tailwind Config ===== -->
   <script>
@@ -33,33 +31,58 @@
   <!-- ===== Inline Styles (transitions & scrollbar) ===== -->
   <style>
     /* Hide every section by default */
-    .section { display: none; }
+    .section {
+      display: none;
+    }
+
     /* The active section fades in */
     .section.active {
       display: block;
       animation: fadeIn 0.4s ease-in-out;
     }
+
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(6px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
+
     /* Minimal scrollbar to match the aesthetic */
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #000; }
-    ::-webkit-scrollbar-thumb { background: #333; }
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #000;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #333;
+    }
+
     /* Nav link underline on hover */
     .nav-link {
       position: relative;
       transition: color 0.15s;
     }
+
     .nav-link::after {
       content: '';
       position: absolute;
-      left: 0; bottom: -2px;
-      width: 0; height: 1px;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
       background: #fff;
       transition: width 0.2s;
     }
+
     .nav-link:hover::after,
     .nav-link.active-link::after {
       width: 100%;
@@ -72,34 +95,23 @@
   <!-- =====================================================
        NAVIGATION — Fixed top bar
        ===================================================== -->
-  <nav
-    id="main-nav"
-    class="fixed top-0 left-0 w-full z-50 bg-black border-b border-neutral-800"
-  >
-    <div
-      class="max-w-5xl mx-auto flex flex-wrap items-center justify-center
-             sm:justify-end gap-x-8 gap-y-2 px-6 py-4 text-sm uppercase tracking-widest"
-    >
+  <nav id="main-nav" class="fixed top-0 left-0 w-full z-50 bg-black border-b border-neutral-800">
+    <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-center
+             sm:justify-end gap-x-8 gap-y-2 px-6 py-4 text-sm uppercase tracking-widest">
       <!-- Each button triggers showSection('sectionId') -->
-      <button
-        id="nav-bio"
+      <button id="nav-bio"
         class="nav-link bg-transparent border-none text-white cursor-pointer text-sm uppercase tracking-widest font-mono"
-        onclick="showSection('bio')"
-      >
+        onclick="showSection('bio')">
         Bio
       </button>
-      <button
-        id="nav-projects"
+      <button id="nav-projects"
         class="nav-link bg-transparent border-none text-white cursor-pointer text-sm uppercase tracking-widest font-mono"
-        onclick="showSection('projects')"
-      >
+        onclick="showSection('projects')">
         Projects
       </button>
-      <button
-        id="nav-contact"
+      <button id="nav-contact"
         class="nav-link bg-transparent border-none text-white cursor-pointer text-sm uppercase tracking-widest font-mono"
-        onclick="showSection('contact')"
-      >
+        onclick="showSection('contact')">
         Contact
       </button>
     </div>
@@ -118,11 +130,8 @@
         ★ SWAP THIS IMAGE ★
         Replace the src below with your own hero image.
       -->
-      <img
-        src="https://placehold.co/800x600/111/fff?text=Tuxedo+Man+Clubbing+Seagull+with+Frozen+Fish"
-        alt="Surreal Art"
-        class="w-full max-w-2xl h-auto"
-      />
+      <img src="https://placehold.co/800x600/111/fff?text=Tuxedo+Man+Clubbing+Seagull+with+Frozen+Fish"
+        alt="Surreal Art" class="w-full max-w-2xl h-auto" />
     </div>
 
     <!-- ─────────────────────────────────────────────────────
@@ -168,44 +177,55 @@
       <div class="space-y-6 max-w-2xl">
         <article>
           <h2 class="font-bold text-lg">01 — Project Alpha</h2>
-          <p class="text-neutral-400 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
+          <p class="text-neutral-400 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
+            tempor.</p>
         </article>
         <article>
           <h2 class="font-bold text-lg">02 — Project Bravo</h2>
-          <p class="text-neutral-400 text-sm">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+          <p class="text-neutral-400 text-sm">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+          </p>
         </article>
         <article>
           <h2 class="font-bold text-lg">03 — Project Charlie</h2>
-          <p class="text-neutral-400 text-sm">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+          <p class="text-neutral-400 text-sm">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore.</p>
         </article>
         <article>
           <h2 class="font-bold text-lg">04 — Project Delta</h2>
-          <p class="text-neutral-400 text-sm">Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia.</p>
+          <p class="text-neutral-400 text-sm">Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia.
+          </p>
         </article>
         <article>
           <h2 class="font-bold text-lg">05 — Project Echo</h2>
-          <p class="text-neutral-400 text-sm">Curabitur pretium tincidunt lacus nulla gravida orci a odio nullam varius.</p>
+          <p class="text-neutral-400 text-sm">Curabitur pretium tincidunt lacus nulla gravida orci a odio nullam varius.
+          </p>
         </article>
         <article>
           <h2 class="font-bold text-lg">06 — Project Foxtrot</h2>
-          <p class="text-neutral-400 text-sm">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+          <p class="text-neutral-400 text-sm">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium.</p>
         </article>
         <article>
           <h2 class="font-bold text-lg">07 — Project Golf</h2>
-          <p class="text-neutral-400 text-sm">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+          <p class="text-neutral-400 text-sm">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+            fugit.</p>
         </article>
         <article>
           <h2 class="font-bold text-lg">08 — Project Hotel</h2>
-          <p class="text-neutral-400 text-sm">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur.</p>
+          <p class="text-neutral-400 text-sm">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet
+            consectetur.</p>
         </article>
         <article>
           <h2 class="font-bold text-lg">09 — Project India</h2>
-          <p class="text-neutral-400 text-sm">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam.</p>
+          <p class="text-neutral-400 text-sm">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam.
+          </p>
         </article>
         <article>
           <h2 class="font-bold text-lg">10 — Project Juliet</h2>
-          <p class="text-neutral-400 text-sm">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</p>
+          <p class="text-neutral-400 text-sm">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.
+          </p>
         </article>
+        </p>
       </div>
     </div>
 
@@ -223,44 +243,26 @@
       -->
       <div class="space-y-4 text-neutral-300 max-w-2xl">
         <p>
-          <a
-            id="contact-email"
-            href="mailto:hello@example.com"
-            class="underline underline-offset-4 hover:text-white transition-colors"
-          >
+          <a id="contact-email" href="mailto:hello@example.com"
+            class="underline underline-offset-4 hover:text-white transition-colors">
             hello@example.com
           </a>
         </p>
         <p>
-          <a
-            id="contact-github"
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="underline underline-offset-4 hover:text-white transition-colors"
-          >
+          <a id="contact-github" href="https://github.com" target="_blank" rel="noopener noreferrer"
+            class="underline underline-offset-4 hover:text-white transition-colors">
             GitHub
           </a>
         </p>
         <p>
-          <a
-            id="contact-linkedin"
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="underline underline-offset-4 hover:text-white transition-colors"
-          >
+          <a id="contact-linkedin" href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+            class="underline underline-offset-4 hover:text-white transition-colors">
             LinkedIn
           </a>
         </p>
         <p>
-          <a
-            id="contact-twitter"
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="underline underline-offset-4 hover:text-white transition-colors"
-          >
+          <a id="contact-twitter" href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+            class="underline underline-offset-4 hover:text-white transition-colors">
             Twitter / X
           </a>
         </p>
@@ -302,4 +304,5 @@
   </script>
 
 </body>
+
 </html>
