@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projects — selected works and case studies." />
+  <title>Projects — Portfolio</title>
+
+  <!-- ===== Tailwind CSS (CDN) ===== -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ===== Font: JetBrains Mono (monospace) ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- ===== Tailwind Config ===== -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            mono: ['"JetBrains Mono"', 'Courier New', 'Courier', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- ===== Inline Styles ===== -->
+  <style>
+    .page-content {
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #000;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #333;
+    }
+
+    .nav-link {
+      position: relative;
+      transition: color 0.15s;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background: #fff;
+      transition: width 0.2s;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active-link::after {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body class="bg-black text-white font-mono min-h-screen">
+
+  <!-- =====================================================
+       NAVIGATION — Fixed top bar
+       ===================================================== -->
+  <nav id="main-nav" class="fixed top-0 left-0 w-full z-50 bg-black border-b border-neutral-800">
+    <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-center
+             sm:justify-end gap-x-8 gap-y-2 px-6 py-4 text-sm uppercase tracking-widest">
+      <a href="bio.html"
+        class="nav-link text-white no-underline text-sm uppercase tracking-widest font-mono">
+        Bio
+      </a>
+      <a href="projects.html"
+        class="nav-link active-link text-white no-underline text-sm uppercase tracking-widest font-mono">
+        Projects
+      </a>
+      <a href="contact.html"
+        class="nav-link text-white no-underline text-sm uppercase tracking-widest font-mono">
+        Contact
+      </a>
+    </div>
+  </nav>
+
+  <!-- =====================================================
+       MAIN CONTENT — Projects
+       ===================================================== -->
+  <main class="pt-20 px-6 pb-16 max-w-4xl mx-auto">
+    <div class="page-content min-h-[70vh] flex flex-col justify-center">
+      <h1 class="text-3xl sm:text-4xl font-bold uppercase tracking-wider mb-10">
+        Projects
+      </h1>
+
+      <!--
+        ★ REPLACE PROJECTS ★
+        Each <article> is one project. Change the title (<h2>) and
+        description (<p>) to match your real work.
+      -->
+      <div class="space-y-6 max-w-2xl">
+        <article>
+          <h2 class="font-bold text-lg">01 — Project Alpha</h2>
+          <p class="text-neutral-400 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
+            tempor.</p>
+        </article>
+        <article>
+          <h2 class="font-bold text-lg">02 — Project Bravo</h2>
+          <p class="text-neutral-400 text-sm">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+          </p>
+        </article>
+        <article>
+          <h2 class="font-bold text-lg">03 — Project Charlie</h2>
+          <p class="text-neutral-400 text-sm">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore.</p>
+        </article>
+        <article>
+          <h2 class="font-bold text-lg">04 — Project Delta</h2>
+          <p class="text-neutral-400 text-sm">Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia.
+          </p>
+        </article>
+        <article>
+          <h2 class="font-bold text-lg">05 — Project Echo</h2>
+          <p class="text-neutral-400 text-sm">Curabitur pretium tincidunt lacus nulla gravida orci a odio nullam varius.
+          </p>
+        </article>
+        <article>
+          <h2 class="font-bold text-lg">06 — Project Foxtrot</h2>
+          <p class="text-neutral-400 text-sm">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium.</p>
+        </article>
+        <article>
+          <h2 class="font-bold text-lg">07 — Project Golf</h2>
+          <p class="text-neutral-400 text-sm">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+            fugit.</p>
+        </article>
+        <article>
+          <h2 class="font-bold text-lg">08 — Project Hotel</h2>
+          <p class="text-neutral-400 text-sm">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet
+            consectetur.</p>
+        </article>
+        <article>
+          <h2 class="font-bold text-lg">09 — Project India</h2>
+          <p class="text-neutral-400 text-sm">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam.
+          </p>
+        </article>
+        <article>
+          <h2 class="font-bold text-lg">10 — Project Juliet</h2>
+          <p class="text-neutral-400 text-sm">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.
+          </p>
+        </article>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>

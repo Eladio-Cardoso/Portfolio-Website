@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Personal portfolio — brutalist minimal design." />
-  <title>Portfolio</title>
+  <meta name="description" content="Contact — get in touch via email or social links." />
+  <title>Contact — Portfolio</title>
 
   <!-- ===== Tailwind CSS (CDN) ===== -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -30,7 +30,6 @@
 
   <!-- ===== Inline Styles ===== -->
   <style>
-    /* Page fade-in on load */
     .page-content {
       animation: fadeIn 0.4s ease-in-out;
     }
@@ -47,7 +46,6 @@
       }
     }
 
-    /* Minimal scrollbar to match the aesthetic */
     ::-webkit-scrollbar {
       width: 6px;
     }
@@ -60,7 +58,6 @@
       background: #333;
     }
 
-    /* Nav link underline on hover */
     .nav-link {
       position: relative;
       transition: color 0.15s;
@@ -87,7 +84,7 @@
 <body class="bg-black text-white font-mono min-h-screen">
 
   <!-- =====================================================
-       NAVIGATION — Fixed top bar (shared across all pages)
+       NAVIGATION — Fixed top bar
        ===================================================== -->
   <nav id="main-nav" class="fixed top-0 left-0 w-full z-50 bg-black border-b border-neutral-800">
     <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-center
@@ -101,23 +98,51 @@
         Projects
       </a>
       <a href="contact.html"
-        class="nav-link text-white no-underline text-sm uppercase tracking-widest font-mono">
+        class="nav-link active-link text-white no-underline text-sm uppercase tracking-widest font-mono">
         Contact
       </a>
     </div>
   </nav>
 
   <!-- =====================================================
-       MAIN CONTENT — Home / Hero image
+       MAIN CONTENT — Contact
        ===================================================== -->
   <main class="pt-20 px-6 pb-16 max-w-4xl mx-auto">
-    <div class="page-content flex items-center justify-center min-h-[70vh]">
+    <div class="page-content min-h-[70vh] flex flex-col justify-center">
+      <h1 class="text-3xl sm:text-4xl font-bold uppercase tracking-wider mb-10">
+        Contact
+      </h1>
+
       <!--
-        ★ SWAP THIS IMAGE ★
-        Replace the src below with your own hero image.
+        ★ REPLACE CONTACT INFO ★
+        Update the mailto link and social URLs with your own.
       -->
-      <img src="https://placehold.co/800x600/111/fff?text=Tuxedo+Man+Clubbing+Seagull+with+Frozen+Fish"
-        alt="Surreal Art" class="w-full max-w-2xl h-auto" />
+      <div class="space-y-4 text-neutral-300 max-w-2xl">
+        <p>
+          <a id="contact-email" href="mailto:hello@example.com"
+            class="underline underline-offset-4 hover:text-white transition-colors">
+            hello@example.com
+          </a>
+        </p>
+        <p>
+          <a id="contact-github" href="https://github.com" target="_blank" rel="noopener noreferrer"
+            class="underline underline-offset-4 hover:text-white transition-colors">
+            GitHub
+          </a>
+        </p>
+        <p>
+          <a id="contact-linkedin" href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+            class="underline underline-offset-4 hover:text-white transition-colors">
+            LinkedIn
+          </a>
+        </p>
+        <p>
+          <a id="contact-twitter" href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+            class="underline underline-offset-4 hover:text-white transition-colors">
+            Twitter / X
+          </a>
+        </p>
+      </div>
     </div>
   </main>
 

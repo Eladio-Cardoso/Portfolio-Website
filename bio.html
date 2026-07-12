@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Personal portfolio — brutalist minimal design." />
-  <title>Portfolio</title>
+  <meta name="description" content="Bio — personal background and biography." />
+  <title>Bio — Portfolio</title>
 
   <!-- ===== Tailwind CSS (CDN) ===== -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -30,7 +30,6 @@
 
   <!-- ===== Inline Styles ===== -->
   <style>
-    /* Page fade-in on load */
     .page-content {
       animation: fadeIn 0.4s ease-in-out;
     }
@@ -47,7 +46,6 @@
       }
     }
 
-    /* Minimal scrollbar to match the aesthetic */
     ::-webkit-scrollbar {
       width: 6px;
     }
@@ -60,7 +58,6 @@
       background: #333;
     }
 
-    /* Nav link underline on hover */
     .nav-link {
       position: relative;
       transition: color 0.15s;
@@ -87,13 +84,13 @@
 <body class="bg-black text-white font-mono min-h-screen">
 
   <!-- =====================================================
-       NAVIGATION — Fixed top bar (shared across all pages)
+       NAVIGATION — Fixed top bar
        ===================================================== -->
   <nav id="main-nav" class="fixed top-0 left-0 w-full z-50 bg-black border-b border-neutral-800">
     <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-center
              sm:justify-end gap-x-8 gap-y-2 px-6 py-4 text-sm uppercase tracking-widest">
       <a href="bio.html"
-        class="nav-link text-white no-underline text-sm uppercase tracking-widest font-mono">
+        class="nav-link active-link text-white no-underline text-sm uppercase tracking-widest font-mono">
         Bio
       </a>
       <a href="projects.html"
@@ -108,16 +105,31 @@
   </nav>
 
   <!-- =====================================================
-       MAIN CONTENT — Home / Hero image
+       MAIN CONTENT — Bio
        ===================================================== -->
   <main class="pt-20 px-6 pb-16 max-w-4xl mx-auto">
-    <div class="page-content flex items-center justify-center min-h-[70vh]">
+    <div class="page-content min-h-[70vh] flex flex-col justify-center">
+      <h1 class="text-3xl sm:text-4xl font-bold uppercase tracking-wider mb-10">
+        Bio
+      </h1>
+
       <!--
-        ★ SWAP THIS IMAGE ★
-        Replace the src below with your own hero image.
+        ★ REPLACE BIO TEXT ★
+        Swap the lorem ipsum paragraphs below with your own biography.
       -->
-      <img src="https://placehold.co/800x600/111/fff?text=Tuxedo+Man+Clubbing+Seagull+with+Frozen+Fish"
-        alt="Surreal Art" class="w-full max-w-2xl h-auto" />
+      <p class="text-neutral-300 leading-relaxed mb-6 max-w-2xl">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur.
+      </p>
+      <p class="text-neutral-300 leading-relaxed max-w-2xl">
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+        deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus.
+        Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra,
+        est eros bibendum elit, nec luctus magna felis sollicitudin mauris.
+      </p>
     </div>
   </main>
 
