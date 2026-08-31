@@ -78,6 +78,66 @@
     .nav-link.active-link::after {
       width: 100%;
     }
+
+    /* ===== Projects Dropdown ===== */
+    .projects-dropdown {
+      position: relative;
+    }
+
+    .projects-dropdown-toggle {
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .projects-dropdown-toggle .arrow {
+      display: inline-block;
+      margin-left: 4px;
+      font-size: 0.6em;
+      transition: transform 0.25s ease;
+    }
+
+    .projects-dropdown.open .arrow {
+      transform: rotate(180deg);
+    }
+
+    .projects-dropdown-menu {
+      position: absolute;
+      top: calc(100% + 14px);
+      left: 50%;
+      transform: translateX(-50%) translateY(-6px);
+      min-width: 240px;
+      background: #111;
+      border: 1px solid #333;
+      padding: 6px 0;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+      z-index: 100;
+    }
+
+    .projects-dropdown.open .projects-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .projects-dropdown-menu a {
+      display: block;
+      padding: 8px 16px;
+      color: #aaa;
+      text-decoration: none;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      transition: color 0.15s, background 0.15s;
+    }
+
+    .projects-dropdown-menu a:hover {
+      color: #fff;
+      background: #1a1a1a;
+    }
   </style>
 </head>
 
@@ -95,10 +155,24 @@
       <a href="bio.html" class="nav-link text-white no-underline text-sm uppercase tracking-widest font-mono">
         Bio
       </a>
-      <a href="projects.html"
-        class="nav-link active-link text-white no-underline text-sm uppercase tracking-widest font-mono">
-        Projects
-      </a>
+      <div class="projects-dropdown" id="projects-dropdown">
+        <span class="nav-link active-link text-white no-underline text-sm uppercase tracking-widest font-mono projects-dropdown-toggle"
+              id="projects-dropdown-toggle">
+          Projects <span class="arrow">▼</span>
+        </span>
+        <div class="projects-dropdown-menu">
+          <a href="projects.html#project-1">Undisclosed Fantasy Novel</a>
+          <a href="projects.html#project-2">Project Bravo</a>
+          <a href="projects.html#project-3">Project Charlie</a>
+          <a href="projects.html#project-4">Project Delta</a>
+          <a href="projects.html#project-5">Project Echo</a>
+          <a href="projects.html#project-6">Project Foxtrot</a>
+          <a href="projects.html#project-7">Project Golf</a>
+          <a href="projects.html#project-8">Project Hotel</a>
+          <a href="projects.html#project-9">Project India</a>
+          <a href="projects.html#project-10">Project Juliet</a>
+        </div>
+      </div>
       <a href="contact.html" class="nav-link text-white no-underline text-sm uppercase tracking-widest font-mono">
         Contact
       </a>
@@ -120,7 +194,7 @@
         description (<p>) to match your real work.
       -->
       <div class="space-y-6 max-w-2xl">
-        <article>
+        <article id="project-1">
           <h2 class="font-bold text-lg">Undisclosed Fantasy Novel</h2>
           <br><br>
           <p class="text-neutral-400 text-sm">The winter was bitter, bitterer than raw nettle salad and unfermented
@@ -191,47 +265,47 @@
             scene
           </p>
         </article>
-        <article>
+        <article id="project-2">
           <h2 class="font-bold text-lg">02 — Project Bravo</h2>
           <p class="text-neutral-400 text-sm">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
           </p>
         </article>
-        <article>
+        <article id="project-3">
           <h2 class="font-bold text-lg">03 — Project Charlie</h2>
           <p class="text-neutral-400 text-sm">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
             dolore.</p>
         </article>
-        <article>
+        <article id="project-4">
           <h2 class="font-bold text-lg">04 — Project Delta</h2>
           <p class="text-neutral-400 text-sm">Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia.
           </p>
         </article>
-        <article>
+        <article id="project-5">
           <h2 class="font-bold text-lg">05 — Project Echo</h2>
           <p class="text-neutral-400 text-sm">Curabitur pretium tincidunt lacus nulla gravida orci a odio nullam varius.
           </p>
         </article>
-        <article>
+        <article id="project-6">
           <h2 class="font-bold text-lg">06 — Project Foxtrot</h2>
           <p class="text-neutral-400 text-sm">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium.</p>
         </article>
-        <article>
+        <article id="project-7">
           <h2 class="font-bold text-lg">07 — Project Golf</h2>
           <p class="text-neutral-400 text-sm">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
             fugit.</p>
         </article>
-        <article>
+        <article id="project-8">
           <h2 class="font-bold text-lg">08 — Project Hotel</h2>
           <p class="text-neutral-400 text-sm">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet
             consectetur.</p>
         </article>
-        <article>
+        <article id="project-9">
           <h2 class="font-bold text-lg">09 — Project India</h2>
           <p class="text-neutral-400 text-sm">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam.
           </p>
         </article>
-        <article>
+        <article id="project-10">
           <h2 class="font-bold text-lg">10 — Project Juliet</h2>
           <p class="text-neutral-400 text-sm">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.
           </p>
@@ -239,6 +313,25 @@
       </div>
     </div>
   </main>
+
+  <!-- ===== Dropdown Toggle Script ===== -->
+  <script>
+    (function () {
+      const dropdown = document.getElementById('projects-dropdown');
+      const toggle = document.getElementById('projects-dropdown-toggle');
+
+      toggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        dropdown.classList.toggle('open');
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove('open');
+        }
+      });
+    })();
+  </script>
 
 </body>
 
