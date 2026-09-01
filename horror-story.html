@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Bio — personal background and biography." />
-  <title>Bio — Portfolio</title>
+  <meta name="description" content="Horror Story — selected works and case studies." />
+  <title>Horror Story — Portfolio</title>
 
   <!-- ===== Tailwind CSS (CDN) ===== -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -134,7 +134,8 @@
       transition: color 0.15s, background 0.15s;
     }
 
-    .projects-dropdown-menu a:hover {
+    .projects-dropdown-menu a:hover,
+    .projects-dropdown-menu a.active-item {
       color: #fff;
       background: #1a1a1a;
     }
@@ -149,17 +150,16 @@
   <nav id="main-nav" class="fixed top-0 left-0 w-full z-50 bg-black border-b border-neutral-800">
     <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-center
              sm:justify-end gap-x-8 gap-y-2 px-6 py-4 text-sm uppercase tracking-widest">
-      <a href="index.html"
-        class="nav-link text-white no-underline text-sm uppercase tracking-widest font-mono">
+      <a href="index.html" class="nav-link text-white no-underline text-sm uppercase tracking-widest font-mono">
         Home
       </a>
-      <a href="bio.html"
-        class="nav-link active-link text-white no-underline text-sm uppercase tracking-widest font-mono">
+      <a href="bio.html" class="nav-link text-white no-underline text-sm uppercase tracking-widest font-mono">
         Bio
       </a>
       <div class="projects-dropdown" id="projects-dropdown">
-        <span class="nav-link text-white no-underline text-sm uppercase tracking-widest font-mono projects-dropdown-toggle"
-              id="projects-dropdown-toggle">
+        <span
+          class="nav-link active-link text-white no-underline text-sm uppercase tracking-widest font-mono projects-dropdown-toggle"
+          id="projects-dropdown-toggle">
           Projects <span class="arrow">▼</span>
         </span>
         <div class="projects-dropdown-menu">
@@ -167,43 +167,30 @@
           <a href="sci-fi-novel.html">Sci-Fi Novel</a>
           <a href="graphic-novel.html">Graphic Novel</a>
           <a href="modern-novel.html">Modern Novel</a>
-          <a href="horror-story.html">Horror Story</a>
+          <a href="horror-story.html" class="active-item">Horror Story</a>
           <a href="portuguese-childrens-book.html">Portuguese Children's Book</a>
         </div>
       </div>
-      <a href="contact.html"
-        class="nav-link text-white no-underline text-sm uppercase tracking-widest font-mono">
+      <a href="contact.html" class="nav-link text-white no-underline text-sm uppercase tracking-widest font-mono">
         Contact
       </a>
     </div>
   </nav>
 
   <!-- =====================================================
-       MAIN CONTENT — Bio
+       MAIN CONTENT — Horror Story
        ===================================================== -->
   <main class="pt-20 px-6 pb-16 max-w-4xl mx-auto">
     <div class="page-content min-h-[70vh] flex flex-col justify-center">
-      <h1 class="text-3xl sm:text-4xl font-bold uppercase tracking-wider mb-10">
-        Bio
-      </h1>
-
-      <!--
-        ★ REPLACE BIO TEXT ★
-        Swap the lorem ipsum paragraphs below with your own biography.
-      -->
-      <p class="text-neutral-300 leading-relaxed mb-6 max-w-2xl">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur.
-      </p>
-      <p class="text-neutral-300 leading-relaxed max-w-2xl">
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus.
-        Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra,
-        est eros bibendum elit, nec luctus magna felis sollicitudin mauris.
-      </p>
+      <div class="space-y-6 max-w-2xl">
+        <article id="project-5">
+          <h1 class="text-3xl sm:text-4xl font-bold uppercase tracking-wider mb-8">
+            Horror Story
+          </h1>
+          <p class="text-neutral-400 text-sm leading-relaxed">Curabitur pretium tincidunt lacus nulla gravida orci a odio nullam varius.
+          </p>
+        </article>
+      </div>
     </div>
   </main>
 

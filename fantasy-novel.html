@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Projects — selected works and case studies." />
-  <title>Projects — Portfolio</title>
+  <meta name="description" content="Fantasy Novel — selected works and case studies." />
+  <title>Fantasy Novel — Portfolio</title>
 
   <!-- ===== Tailwind CSS (CDN) ===== -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -134,7 +134,8 @@
       transition: color 0.15s, background 0.15s;
     }
 
-    .projects-dropdown-menu a:hover {
+    .projects-dropdown-menu a:hover,
+    .projects-dropdown-menu a.active-item {
       color: #fff;
       background: #1a1a1a;
     }
@@ -162,7 +163,7 @@
           Projects <span class="arrow">▼</span>
         </span>
         <div class="projects-dropdown-menu">
-          <a href="fantasy-novel.html">Fantasy Novel</a>
+          <a href="fantasy-novel.html" class="active-item">Fantasy Novel</a>
           <a href="sci-fi-novel.html">Sci-Fi Novel</a>
           <a href="graphic-novel.html">Graphic Novel</a>
           <a href="modern-novel.html">Modern Novel</a>
@@ -177,24 +178,16 @@
   </nav>
 
   <!-- =====================================================
-       MAIN CONTENT — Projects
+       MAIN CONTENT — Fantasy Novel
        ===================================================== -->
   <main class="pt-20 px-6 pb-16 max-w-4xl mx-auto">
     <div class="page-content min-h-[70vh] flex flex-col justify-center">
-      <h1 class="text-3xl sm:text-4xl font-bold uppercase tracking-wider mb-10">
-        Projects
-      </h1>
-
-      <!--
-        ★ REPLACE PROJECTS ★
-        Each <article> is one project. Change the title (<h2>) and
-        description (<p>) to match your real work.
-      -->
       <div class="space-y-6 max-w-2xl">
         <article id="project-1">
-          <h2 class="font-bold text-lg">Fantasy Novel</h2>
-          <br><br>
-          <p class="text-neutral-400 text-sm">The winter was bitter, bitterer than raw nettle salad and unfermented
+          <h1 class="text-3xl sm:text-4xl font-bold uppercase tracking-wider mb-8">
+            Fantasy Novel
+          </h1>
+          <p class="text-neutral-400 text-sm leading-relaxed">The winter was bitter, bitterer than raw nettle salad and unfermented
             swamp grog, bitterer than the thickest
             bark brew, bitterer than a mother you never knew.
             <br><br>
@@ -263,52 +256,6 @@
             scene
           </p>
         </article>
-        <article id="project-2">
-          <h2 class="font-bold text-lg">Sci-Fi Novel</h2>
-          <p class="text-neutral-400 text-sm">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
-          </p>
-        </article>
-        <article id="project-3">
-          <h2 class="font-bold text-lg">Graphic Novel</h2>
-          <p class="text-neutral-400 text-sm">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-            dolore.</p>
-        </article>
-        <article id="project-4">
-          <h2 class="font-bold text-lg">Modern Novel</h2>
-          <p class="text-neutral-400 text-sm">Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia.
-          </p>
-        </article>
-        <article id="project-5">
-          <h2 class="font-bold text-lg">Horror Story</h2>
-          <p class="text-neutral-400 text-sm">Curabitur pretium tincidunt lacus nulla gravida orci a odio nullam varius.
-          </p>
-        </article>
-        <article id="project-6">
-          <h2 class="font-bold text-lg">Portuguese Children's Book</h2>
-          <p class="text-neutral-400 text-sm">Na grande e quente savana havia uma Girafa chamada Galho. O Galho era
-            traquinas e tendo apenas vivido durante dois invernos já se comportava como um menino de oito.
-            <br><br>
-            Galho era pequeno em tamanho comparado com Palma, a sua mãe Girafa, mas já alto e admirado entre os pequenos
-            animais da savana porque arranjava sempre uma maneira de ajudar aqueles que precisavam de ajuda.
-            <br><br>
-            Sendo ainda um pouco desajeitado e pequeno para uma girafa, a mãe fazia corridas com ele e mostrava-lhe as
-            melhores folhas a comer para que um dia Galho pudesse viver sem a sua ajuda.
-            <br><br>
-            "Meu Galhito, quando cresceres vais perceber que as melhores folhas para comer estão nas arvores altas e
-            entre os espinhos e que para sobrevivermos temos que estar atentos aos perigos e andar bem na vida."
-            <br><br>
-            "Mãe, um dia vou encontrar um sítio para viver onde haja muita folha perto do chão, assim nunca mais temos
-            que nos esticar para comer!"
-            <br><br>
-            A Mãe riu-se e respondeu "Oh filho... Perto do chão eu não me consigo dobrar para comer. Se encontrares tal
-            sítio vais ser tu a dar-me comida e não eu a ti!"
-            <br><br>
-            "Vou já começar á procura!" E desatou a correr todo desajeitado.
-            <br><br>
-            "Galhito, não te afastes muito do grupo que é perigoso" Falou a mãe preocupada.
-          </p>
-        </article>
-
       </div>
     </div>
   </main>
